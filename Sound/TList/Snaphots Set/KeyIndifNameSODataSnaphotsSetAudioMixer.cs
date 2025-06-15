@@ -15,4 +15,16 @@ public class KeyIndifNameSODataSnaphotsSetAudioMixer : AbsIdentifierAndData<Snap
     {
         return _dataKey;
     }
+    
+#if UNITY_EDITOR
+    public override string GetJsonSaveData()
+    {
+        return JsonUtility.ToJson(_dataKey);
+    }
+
+    public override void SetJsonData(string json)
+    {
+        _dataKey = JsonUtility.FromJson<SKeySnaphotsSetAudioMixer>(json);
+    }
+#endif
 }

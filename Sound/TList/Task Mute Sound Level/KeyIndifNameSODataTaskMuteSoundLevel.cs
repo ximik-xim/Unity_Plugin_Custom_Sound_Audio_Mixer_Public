@@ -15,4 +15,16 @@ public class KeyIndifNameSODataTaskMuteSoundLevel : AbsIdentifierAndData<TaskMut
     {
         return _dataKey;
     }
+    
+#if UNITY_EDITOR
+    public override string GetJsonSaveData()
+    {
+        return JsonUtility.ToJson(_dataKey);
+    }
+
+    public override void SetJsonData(string json)
+    {
+        _dataKey = JsonUtility.FromJson<SKeyTaskDataMuteSoundLevel>(json);
+    }
+#endif
 }
