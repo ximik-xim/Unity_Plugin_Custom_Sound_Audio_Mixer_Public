@@ -2,12 +2,12 @@ using System;
 using UnityEngine;
 
 /// <summary>
-/// Пример хранилище на превсах, для сохранения уровня звука(через хранилеще float)
+/// Пример хранилище, для сохранения уровня звука(через хранилеще float)
 /// </summary>
-public class CS_SoundLevelPatchSDStorageStringPrefs : CS_SoundLevelAbsPatchStorageValue
+public class CS_SoundLevelPatchSDStorageString : CS_SoundLevelAbsPatchStorageValue
 {
     [SerializeField] 
-    private SD_StorageDataStringPrefs _storageSaveData;
+    private SD_AbsStringStorage _storageSaveData;
     [SerializeField] 
     private GetDataSO_SD_KeyStorageStringVariable _key;
     
