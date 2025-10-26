@@ -12,3 +12,5 @@ Unity_Plugin-General_Public - https://github.com/ximik-xim/Unity_Plugin-TList_Pu
 Unity_Plugin-TList_Public - https://github.com/ximik-xim/Unity_Plugin-General_Public
 
 Unity_Plugin_Save_Data_Public - https://github.com/ximik-xim/Unity_Plugin_Save_Data_Public
+
+Unity_Plugin_Storage_UI_Image_Public - https://github.com/ximik-xim/Unity_Plugin_Storage_UI_Image_Public
