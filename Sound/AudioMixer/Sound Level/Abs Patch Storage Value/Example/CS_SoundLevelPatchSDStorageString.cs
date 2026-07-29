@@ -89,11 +89,19 @@ public class CS_SoundLevelPatchSDStorageString : CS_SoundLevelAbsPatchStorageVal
     {
         if (_soundData == null)
         {
-            _soundData = JsonUtility.FromJson<S_SoundData>(_storageSaveData.GetData(_key.GetData()));
-            if (_soundData == null)
+            if (_storageSaveData.IsThereData(_key.GetData()) == true) 
+            {
+                _soundData = JsonUtility.FromJson<S_SoundData>(_storageSaveData.GetData(_key.GetData()));
+                if (_soundData == null)
+                {
+                    _soundData = new S_SoundData();
+                }    
+            }
+            else
             {
                 _soundData = new S_SoundData();
             }
+            
         }
     }
 
